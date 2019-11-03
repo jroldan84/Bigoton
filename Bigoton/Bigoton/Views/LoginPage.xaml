@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Bigoton.Views.LoginPage">
+
+ 
+        <ScrollView>
+            <StackLayout
+                Margin="10"
+                >
+                <Grid
+                    RowSpacing="0"
+                    >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.RowSpan="4"
+                        BackgroundColor="Transparent"
+                    />
+                    <Image
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="2"
+                        Source="Logo.PNG"
+                        HeightRequest="200"
+                    />
+
+                    <Label
+                        Grid.Column="3"
+                        Grid.Row="0"
+                        Grid.RowSpan="4"
+                        BackgroundColor="Transparent"
+                    />
+
+                    <Frame
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="4"
+                        BorderColor="Black"
+                        CornerRadius="20"
+                        Padding="0,0,0,10"
+                    >
+                        <StackLayout>
+                            <Frame
+                                BackgroundColor="Black"
+                                Padding="0"
+                                Margin="10"
+                                CornerRadius="20"
+                                >
+                                <Entry
+                                BackgroundColor="Transparent"
+                                TextColor="White"
+                                Placeholder="Email"
+                                PlaceholderColor="White"
+                            />
+                            </Frame>
+                            <Frame
+                                BackgroundColor="Black"
+                                Padding="0"
+                                Margin="10"
+                                CornerRadius="20"
+                                >
+                                <Entry
+                                    BackgroundColor="Transparent"
+                                    TextColor="White"
+                                    Placeholder="Password"
+                                    PlaceholderColor="White"
+                                />
+                            </Frame>
+                            <Button
+                                CornerRadius="20"
+                                Text="entrar"
+                                BackgroundColor="LightGoldenrodYellow"
+                                HorizontalOptions="CenterAndExpand"
+                            />
+                            <Label
+                                Text="O"
+                                HorizontalOptions="Center"
+                             />
+                            <Button
+                                BackgroundColor="DarkBlue"
+                                Text="Entrar con Facebook"
+                                TextColor="White"
+                                HorizontalOptions="CenterAndExpand"
+                                CornerRadius="20"
+                            />
+
+                        </StackLayout>
+                    </Frame>
+                    <Button
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Grid.ColumnSpan="2"
+                        Text="Recordar Contraseña"
+                        TextColor="Wheat"
+                        BackgroundColor="Transparent"
+                    />
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="3"
+                        BackgroundColor="Transparent"
+                        Text="¿No está registrado?"
+                        TextColor="White"
+                        HorizontalTextAlignment="End"
+                        VerticalTextAlignment="Center"
+
+                    />
+                    <Button
+                        Grid.Column="2"
+                        Grid.Row="3"
+                        BackgroundColor="Transparent"
+                        Text="Registrate"
+                        TextColor="Wheat"
+                        HorizontalOptions="Start"
+                     />
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+  
+
+</ContentPage>
