@@ -31,6 +31,12 @@ namespace Bigoton
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
             containerRegistry.RegisterForNavigation<Barber_List_Page, Barber_List_PageViewModel>();
+            containerRegistry.RegisterForNavigation<Barber_Detail_Page, Barber_Detail_PageViewModel>();
+            containerRegistry.RegisterForNavigation<Payment_Detail_Page, Payment_Detail_PageViewModel>();
+            containerRegistry.RegisterForNavigation<Meeting_Client_Page, Meeting_Client_PageViewModel>();
+            containerRegistry.RegisterForNavigation<Register_Page, Register_PageViewModel>();
+            containerRegistry.RegisterForNavigation<Record_Client_Page, Record_Client_PageViewModel>();
+            containerRegistry.RegisterForNavigation<Edit_Profile_Page, Edit_Profile_PageViewModel>();
         }
     }
 }

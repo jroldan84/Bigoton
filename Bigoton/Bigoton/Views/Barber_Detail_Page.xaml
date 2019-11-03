@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Bigoton.Views.Barber_Detail_Page">
+
+    <Grid
+                   ColumnSpacing="0"
+       
+                    >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.6*"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="0.4*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Command="{Binding Details_Barber_Command}"/>
+        </Grid.GestureRecognizers>
+
+        <Label
+            Grid.Column="0"
+                Grid.Row="0"  
+                Text="El estadio"
+                TextColor="White"
+                BackgroundColor="Black"
+                HorizontalTextAlignment="Center"
+         />
+        <Label
+            Grid.Column="1"
+                Grid.Row="0"  
+                Text="$"
+                TextColor="White"
+                BackgroundColor="Black"
+                HorizontalTextAlignment="Center"
+         />
+        <Label
+            Grid.Column="2"
+                Grid.Row="0"  
+                Text="10.000"
+                TextColor="White"
+                BackgroundColor="Black"
+                HorizontalTextAlignment="Start"
+         />
+        <Image
+                Grid.Column="0"
+                Grid.Row="1"  
+                Grid.ColumnSpan="3"
+                Source="Corte_Estadio.PNG"
+                />
+
+    </Grid>
+
+</ContentPage>

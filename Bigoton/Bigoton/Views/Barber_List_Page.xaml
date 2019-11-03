@@ -4,5 +4,86 @@
              xmlns:prism="http://prismlibrary.com"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Bigoton.Views.Barber_List_Page">
-  
+
+    <ScrollView>
+        <Grid
+                    RowSpacing="0"
+                    >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+             
+            </Grid.ColumnDefinitions>
+
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding Details_Barber_Command}"/>
+            </Grid.GestureRecognizers>
+            <Image
+                Grid.Column="0"
+                Grid.Row="0"  
+                Grid.ColumnSpan="2"
+                Source="Logo.PNG"
+                />
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="1"  
+                Text="Nombre"
+                TextColor="White"
+                BackgroundColor="Black"
+                HorizontalTextAlignment="Center"    
+             
+                />
+
+            <Label
+                Grid.Column="1"
+                Grid.Row="1"  
+                Text="Citas"
+                TextColor="White"
+                BackgroundColor="Black"
+                HorizontalTextAlignment="Center"    
+             
+                />
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="2"  
+                Text="Alejandro Mejia"
+                HorizontalTextAlignment="Center"    
+             
+                />
+
+            <Label
+                Grid.Column="1"
+                Grid.Row="2"  
+                Text="4"
+                HorizontalTextAlignment="Center"    
+             
+                />
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="3"  
+                Text="Mario Castañeda"
+                HorizontalTextAlignment="Center"    
+             
+                />
+
+            <Label
+                Grid.Column="1"
+                Grid.Row="3"  
+                Text="0"
+                HorizontalTextAlignment="Center"    
+             
+                />
+
+
+        </Grid>
+    </ScrollView>
+
 </ContentPage>
