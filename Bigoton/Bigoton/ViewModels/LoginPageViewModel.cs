@@ -40,7 +40,7 @@ namespace Bigoton.ViewModels
 
             if (Email.Equals("jroldan84@hotmail.com.co") || Password.Equals("123456"))
             {
-                await App.Current.MainPage.DisplayAlert("Hello" ,"", "Accept");
+                await App.Current.MainPage.DisplayAlert("Hello Welcome the Barber Bigoton" ,"", "Accept");
                 await _navigationService.NavigateAsync("Barber_List_Page");
             }
             else
