@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
+using System;
 
 namespace Bigoton.Web.Migrations
 {
@@ -17,7 +18,7 @@ namespace Bigoton.Web.Migrations
                     FirstName = table.Column<string>(maxLength: 50, nullable: false),
                     LastName = table.Column<string>(maxLength: 50, nullable: false),
                     CellPhone = table.Column<string>(maxLength: 50, nullable: false),
-                    BirthDate = table.Column<double>(maxLength: 50, nullable: false)
+                    BirthDate = table.Column<DateTime>(nullable: false),
                 },
                 constraints: table =>
                 {
