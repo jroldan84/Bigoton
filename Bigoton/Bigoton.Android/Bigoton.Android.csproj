@@ -106,7 +106,7 @@
     <AndroidResource Include="Resources\drawable\Corte_Ratatouille.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Corte_Piña.PNG" />
+    <AndroidResource Include="Resources\drawable\Corte_Pina.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

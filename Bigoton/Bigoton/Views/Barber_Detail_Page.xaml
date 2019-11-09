@@ -92,7 +92,7 @@
         <Label
             Grid.Column="0"
                 Grid.Row="4"  
-                Text="La Piña"
+                Text="La Pina"
                 TextColor="White"
                 BackgroundColor="Black"
                 HorizontalTextAlignment="Center"
