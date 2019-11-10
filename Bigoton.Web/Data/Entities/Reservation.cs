@@ -34,7 +34,7 @@ namespace Bigoton.Web.Data.Entities
 
         public Client Client { get; set; }
 
-        /*public Empleado Emepleado { get; set; }*/
+        /*public Employee Employee { get; set; }*/
 
 
     }
