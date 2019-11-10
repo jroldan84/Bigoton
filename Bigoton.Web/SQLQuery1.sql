@@ -1,0 +1,1 @@
+﻿ALTER TABLE Clients alter column BirthDate datetime
