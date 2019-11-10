@@ -47,9 +47,9 @@ namespace Bigoton.Web.Data.Entities
 
         public Reservation reservation { get; set; }
 
-        /*public CutStyle CutStyle { get; set; }*/
+        public CutStyle CutStyle { get; set; }
 
-        /*public Payment Payment { get; set; }*/
+        public Payment Payment { get; set; }
 
     }
 }

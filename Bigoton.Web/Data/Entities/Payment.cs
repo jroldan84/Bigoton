@@ -26,5 +26,9 @@ namespace Bigoton.Web.Data.Entities
 
         public Client Client { get; set; }
 
+        public DiscountVoucher DiscountVoucher { get; set; }
+
+     
+
     }
 }
