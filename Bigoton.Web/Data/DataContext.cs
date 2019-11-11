@@ -24,5 +24,6 @@ namespace Bigoton.Web.Data
         public DbSet<Payment> Payments { get; set; }
 
         public DbSet<Reservation> Reservations { get; set; }
+      
     }
 }

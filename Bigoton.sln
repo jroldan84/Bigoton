@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29319.158
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bigoton", "Bigoton\Bigoton\Bigoton.csproj", "{562E846B-BF38-4938-A1BA-77148F3CEC65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bigoton", "Bigoton\Bigoton\Bigoton.csproj", "{562E846B-BF38-4938-A1BA-77148F3CEC65}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bigoton.Android", "Bigoton\Bigoton.Android\Bigoton.Android.csproj", "{1674A834-1949-4FBB-80CF-E8440469B227}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bigoton.iOS", "Bigoton\Bigoton.iOS\Bigoton.iOS.csproj", "{0C429E09-2B6C-4ABC-8FD6-54FE9C147720}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bigoton.Web", "Bigoton.Web\Bigoton.Web.csproj", "{0F236C5C-8D71-4CB6-9572-44A4262804ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bigoton.Web", "Bigoton.Web\Bigoton.Web.csproj", "{0F236C5C-8D71-4CB6-9572-44A4262804ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

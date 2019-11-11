@@ -4,14 +4,16 @@ using Bigoton.Web.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Bigoton.Web.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20191111164511_ChangeRelation1")]
+    partial class ChangeRelation1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,15 +49,11 @@ namespace Bigoton.Web.Migrations
 
                     b.Property<int?>("PaymentId");
 
-                    b.Property<int?>("ReservationId");
-
                     b.HasKey("Id");
 
                     b.HasIndex("CutStyleId");
 
                     b.HasIndex("PaymentId");
-
-                    b.HasIndex("ReservationId");
 
                     b.ToTable("Clients");
                 });
@@ -104,10 +102,6 @@ namespace Bigoton.Web.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("EmployeeCode")
-                        .IsRequired()
-                        .HasMaxLength(50);
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(50);
@@ -125,18 +119,9 @@ namespace Bigoton.Web.Migrations
 
                     b.Property<DateTime>("Date");
 
-                    b.Property<string>("DiscountCode")
-                        .IsRequired()
-                        .HasMaxLength(20);
-
                     b.Property<int?>("DiscountVoucherId");
 
-                    b.Property<string>("Document")
-                        .IsRequired()
-                        .HasMaxLength(20);
-
-                    b.Property<string>("TotalPayment")
-                        .IsRequired()
+                    b.Property<float>("TotalPayment")
                         .HasMaxLength(50);
 
                     b.HasKey("Id");
@@ -152,11 +137,9 @@ namespace Bigoton.Web.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("Date");
+                    b.Property<int?>("ClientId");
 
-                    b.Property<string>("Document")
-                        .IsRequired()
-                        .HasMaxLength(20);
+                    b.Property<DateTime>("Date");
 
                     b.Property<string>("EmployeeCode")
                         .IsRequired()
@@ -169,6 +152,8 @@ namespace Bigoton.Web.Migrations
                     b.Property<string>("Remarks");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ClientId");
 
                     b.HasIndex("EmployeeId");
 
@@ -184,10 +169,6 @@ namespace Bigoton.Web.Migrations
                     b.HasOne("Bigoton.Web.Data.Entities.Payment", "Payment")
                         .WithMany("Clients")
                         .HasForeignKey("PaymentId");
-
-                    b.HasOne("Bigoton.Web.Data.Entities.Reservation", "Reservation")
-                        .WithMany("Clients")
-                        .HasForeignKey("ReservationId");
                 });
 
             modelBuilder.Entity("Bigoton.Web.Data.Entities.Payment", b =>
@@ -199,6 +180,10 @@ namespace Bigoton.Web.Migrations
 
             modelBuilder.Entity("Bigoton.Web.Data.Entities.Reservation", b =>
                 {
+                    b.HasOne("Bigoton.Web.Data.Entities.Client", "Client")
+                        .WithMany("Reservations")
+                        .HasForeignKey("ClientId");
+
                     b.HasOne("Bigoton.Web.Data.Entities.Employee", "Employee")
                         .WithMany("Reservations")
                         .HasForeignKey("EmployeeId");

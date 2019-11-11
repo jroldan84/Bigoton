@@ -32,10 +32,14 @@ namespace Bigoton.Web.Data.Entities
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd HH:mm}")]
         public DateTime DateLocal => Date.ToLocalTime();
 
+        [Display(Name = "Document")]
+        [MaxLength(20, ErrorMessage = "The {0} field can not have more than {1} characters.")]
+        [Required(ErrorMessage = "The field {0} is mandatory.")]
+        public string Document { get; set; }
+
         public Employee Employee { get; set; }
 
         public ICollection<Client> Clients { get; set; }
-
 
 
 
