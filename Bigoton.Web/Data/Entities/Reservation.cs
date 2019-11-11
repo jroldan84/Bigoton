@@ -32,9 +32,11 @@ namespace Bigoton.Web.Data.Entities
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd HH:mm}")]
         public DateTime DateLocal => Date.ToLocalTime();
 
-        public Client Client { get; set; }
+        public Employee Employee { get; set; }
 
-        /*public Employee Employee { get; set; }*/
+        public ICollection<Client> Clients { get; set; }
+
+
 
 
     }

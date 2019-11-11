@@ -45,11 +45,18 @@ namespace Bigoton.Web.Data.Entities
         public string FullNameWithDocument => $"{FirstName} {LastName} - {Document}";
 
 
-        public Reservation reservation { get; set; }
+        public Reservation Reservation { get; set; }
 
         public CutStyle CutStyle { get; set; }
 
         public Payment Payment { get; set; }
+
+
+
+
+
+
+    
 
     }
 }

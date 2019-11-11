@@ -19,8 +19,6 @@ namespace Bigoton.Web.Data.Entities
         [Display(Name = "Image")]
         public string ImageUrl { get; set; }
 
-        [MaxLength(50, ErrorMessage = "The {0} field can not have more than {1} characters.")]
-        public string Cut { get; set; }
 
         [Display(Name = "Price")]
         [MaxLength(50, ErrorMessage = "The {0} field can not have more than {1} characters.")]
@@ -35,7 +33,7 @@ namespace Bigoton.Web.Data.Entities
 
 
 
-        public Client Client { get; set; }
+        public ICollection<Client> Clients { get; set; }
 
 
     }

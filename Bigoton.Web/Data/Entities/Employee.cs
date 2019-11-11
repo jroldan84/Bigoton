@@ -16,7 +16,9 @@ namespace Bigoton.Web.Data.Entities
         [Required(ErrorMessage = "The field {0} is mandatory.")]
         public string Name { get; set; }
 
-        public Reservation Reservation { get; set; }
+        public ICollection<Reservation> Reservations { get; set; }
+
+
 
     }
 }

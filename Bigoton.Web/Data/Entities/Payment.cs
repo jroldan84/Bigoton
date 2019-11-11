@@ -21,14 +21,13 @@ namespace Bigoton.Web.Data.Entities
         [Required(ErrorMessage = "The field {0} is mandatory.")]
         [DataType(DataType.DateTime)]
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
+        public DateTime Date { get; set; }
 
-
-
-        public Client Client { get; set; }
 
         public DiscountVoucher DiscountVoucher { get; set; }
 
-     
+        public ICollection<Client> Clients { get; set; }
+
 
     }
 }

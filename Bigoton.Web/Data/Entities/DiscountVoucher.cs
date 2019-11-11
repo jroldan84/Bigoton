@@ -11,12 +11,14 @@ namespace Bigoton.Web.Data.Entities
 
         public int Id { get; set; }
 
-        [Display(Name = "Descuento")]
+        [Display(Name = "Discount")]
         [MaxLength(50, ErrorMessage = "The {0} field can not have more than {1} characters.")]
         [Required(ErrorMessage = "The field {0} is mandatory.")]
-        public string Descuento { get; set; }
+        public string Discount { get; set; }
 
-        public Client Payment { get; set; }
+        public ICollection<Payment> Payments { get; set; }
+
+
 
     }
 }
