@@ -4,5 +4,69 @@
              xmlns:prism="http://prismlibrary.com"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Bigoton.Views.Meeting_Client_Page">
-  
+    <StackLayout Padding="15"
+                >
+        <Grid 
+            Margin="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image
+                Grid.Column="0"
+                Grid.Row="0"
+                Grid.ColumnSpan="4"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Source="ship.jpg"
+            />
+
+
+            <Label
+                Grid.Column="1"
+                Grid.Row="1"
+                Text="El estadio"
+                 HorizontalTextAlignment="Start"
+                FontSize="Large"                    
+            />
+            <Label
+                Grid.Column="2"
+                Grid.Row="1"
+                Text="$"
+                 HorizontalTextAlignment="End"
+                FontSize="Large"                    
+            />
+            <Label
+                Grid.Column="3"
+                Grid.Row="1"
+                Text="10.000"
+                 HorizontalTextAlignment="Start"
+                FontSize="Large"                    
+            />
+
+            <Label
+                Grid.Column="1"
+                Grid.Row="2"
+                Text="Date"
+                 HorizontalTextAlignment="Start"
+                FontSize="Large"                    
+            />
+            <Label
+                Grid.Column="2"
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                Text="12-10-2019"
+                 HorizontalTextAlignment="End"
+                FontSize="Large"                    
+            />
+
+
+        </Grid>
+    </StackLayout>
 </ContentPage>

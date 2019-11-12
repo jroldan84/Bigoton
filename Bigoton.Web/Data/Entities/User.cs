@@ -1,5 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
+
 
 namespace Bigoton.Web.Data.Entities
 {
@@ -20,8 +25,12 @@ namespace Bigoton.Web.Data.Entities
         [Required(ErrorMessage = "The field {0} is mandatory.")]
         public string LastName { get; set; }
 
-        [MaxLength(100, ErrorMessage = "The {0} field can not have more than {1} characters.")]
-        public string Address { get; set; }
+        [Display(Name = "Birth Date")]
+        [Required(ErrorMessage = "The field {0} is mandatory.")]
+        [DataType(DataType.DateTime)]
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
+        public DateTime BirthDate { get; set; }
+
 
         [Display(Name = "Full Name")]
         public string FullName => $"{FirstName} {LastName}";

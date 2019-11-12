@@ -4,5 +4,128 @@
              xmlns:prism="http://prismlibrary.com"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Bigoton.Views.Edit_Profile_Page">
-  
+
+    <StackLayout Padding="5"
+                >
+        <Grid 
+            ColumnSpacing="2"
+            Margin="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="0"
+                Text="Document"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                FontSize="Large"                    
+            />
+            <Entry
+                Grid.Column="1"
+                Grid.Row="0"
+                Text=" "
+                Placeholder="Enter a document"
+                PlaceholderColor="Black"
+                HorizontalTextAlignment="Start"
+                FontSize="Large"                    
+            />
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="1"
+                Text="Name"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                FontSize="Large"                    
+            />
+            <Entry
+                Grid.Column="1"
+                Grid.Row="1"
+                Text=" "
+                Placeholder="Enter a document"
+                PlaceholderColor="Black"
+                HorizontalTextAlignment="Start"
+                FontSize="Large"                    
+            />
+
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="2"
+                Text="Email"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                FontSize="Large"                    
+            />
+            <Entry
+                Grid.Column="1"
+                Grid.Row="2"
+                Text=" "
+                Placeholder="Enter a document"
+                PlaceholderColor="Black"
+                HorizontalTextAlignment="Start"
+                FontSize="Large"                    
+            />
+
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="3"
+                Text="Password"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                FontSize="Large"                    
+            />
+            <Entry
+                Grid.Column="1"
+                Grid.Row="3"
+                Text=" "
+                Placeholder="Enter a document"
+                PlaceholderColor="Black"
+                HorizontalTextAlignment="Start"
+                FontSize="Large"                    
+            />
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="4"
+                Text="Confirm Password"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                FontSize="Large"                    
+            />
+            <Entry
+                Grid.Column="1"
+                Grid.Row="4"
+                Text=" "
+                Placeholder="Enter a document"
+                PlaceholderColor="Black"
+                HorizontalTextAlignment="Start"
+                FontSize="Large"                    
+            />
+
+            <Button
+                Grid.Column="0"
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="Center"
+                WidthRequest="200"
+                Text="Acept"
+            />
+
+        </Grid>
+
+
+    </StackLayout>
+
 </ContentPage>

@@ -1,19 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
+
+
+
+using Bigoton.Web.Data.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Bigoton.Web.Data.Entities;
 
 namespace Bigoton.Web.Data
 {
-    public class DataContext : DbContext
+    public class DataContext : IdentityDbContext<User>
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
         }
         public DbSet<Client> Clients { get; set; }
+
+        public DbSet<Manager> Managers { get; set; }
 
         public DbSet<CutStyle> CutStyles { get; set; }
 
