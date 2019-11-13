@@ -13,7 +13,7 @@ namespace Bigoton.Web.Data.Entities
 
         public User User { get; set; }
 
-
+        
         public Reservation Reservation { get; set; }
 
         public CutStyle CutStyle { get; set; }

@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Bigoton.Web.Data;
 using Bigoton.Web.Data.Entities;
+using Bigoton.Web.Models;
 
 namespace Bigoton.Web.Controllers
 {
     public class ClientsController : Controller
     {
-        private readonly DataContext _context;
+        private readonly BigotonWebContext _context;
 
-        public ClientsController(DataContext context)
+        public ClientsController(BigotonWebContext context)
         {
             _context = context;
         }
@@ -22,7 +22,7 @@ namespace Bigoton.Web.Controllers
         // GET: Clients
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Clients.ToListAsync());
+            return View(await _context.Client.ToListAsync());
         }
 
         // GET: Clients/Details/5
@@ -33,7 +33,7 @@ namespace Bigoton.Web.Controllers
                 return NotFound();
             }
 
-            var client = await _context.Clients
+            var client = await _context.Client
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (client == null)
             {
@@ -54,7 +54,7 @@ namespace Bigoton.Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Document,FirstName,LastName,CellPhone,BirthDate")] Client client)
+        public async Task<IActionResult> Create([Bind("Id")] Client client)
         {
             if (ModelState.IsValid)
             {
@@ -73,7 +73,7 @@ namespace Bigoton.Web.Controllers
                 return NotFound();
             }
 
-            var client = await _context.Clients.FindAsync(id);
+            var client = await _context.Client.FindAsync(id);
             if (client == null)
             {
                 return NotFound();
@@ -86,7 +86,7 @@ namespace Bigoton.Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Document,FirstName,LastName,CellPhone,BirthDate")] Client client)
+        public async Task<IActionResult> Edit(int id, [Bind("Id")] Client client)
         {
             if (id != client.Id)
             {
@@ -124,7 +124,7 @@ namespace Bigoton.Web.Controllers
                 return NotFound();
             }
 
-            var client = await _context.Clients
+            var client = await _context.Client
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (client == null)
             {
@@ -139,15 +139,15 @@ namespace Bigoton.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var client = await _context.Clients.FindAsync(id);
-            _context.Clients.Remove(client);
+            var client = await _context.Client.FindAsync(id);
+            _context.Client.Remove(client);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ClientExists(int id)
         {
-            return _context.Clients.Any(e => e.Id == id);
+            return _context.Client.Any(e => e.Id == id);
         }
     }
 }
